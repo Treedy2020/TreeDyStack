@@ -1,0 +1,89 @@
+site_name: TreeDy Stack
+
+theme: 
+  name: material
+  palette:
+    - primary: teal
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+plugins:
+  - search
+  - macros
+  - markmap
+  - glightbox
+  # Social Cards Part
+  - social
+
+nav:
+  - Home: 'index.md'
+  - Blogs: 
+    - './blogs/streamit.md'
+
+markdown_extensions:
+  # Annotations Part
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+  # Admonition Part
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  # Content Tabs
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # Images
+  - attr_list
+  - md_in_html
+
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  
+  # Lists
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # Code Blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+  # Tooltips
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+
+  # Emoji and Icons
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
