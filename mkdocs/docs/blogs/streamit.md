@@ -111,11 +111,19 @@ Streamlit提供了丰富的API接口，你可以在[官方文档](https://docs.s
     - 上传
     - 检查框、选择框、多选框、滑动（选择）条
     - 文本输入条
-    - ... 
+    - ...
+
 
 !!! tip "更多API"
 
-    除了这些常用的交互组件以外，Streamlit还提供排版容器(Layouts and containers)、进度条和状态(Progress and status)、流控制(Control flow)，缓存(Cache库)等其他好用的API，请参见[API文档](https://docs.streamlit.io/library/api-reference)。
+    除了这些常用的交互组件以外，Streamlit还提供排版容器(Layouts and containers)、进度条和状态(Progress and status)、流控制(Control flow)，缓存(Cache库)等其他好用的API，除了这些以外，还有一些更复杂的组件可以帮助你进行用户登陆、添加评论区等更复杂的功能，请参见[API文档](https://docs.streamlit.io/library/api-reference)。
+
+
+## 开源模版
+
+Streamlit还提供了丰富的开源模版，这些模版的类型包括科学和技术介绍、自然语言处理、CV应用等。你可以在[Streamlit Gallery](https://streamlit.io/gallery "前往Streamlit Gallery")中查看这些模版的效果并让它们为你所用，只需要改正少量的代码即可。
+
+
 
 
 ​    
