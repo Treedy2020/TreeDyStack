@@ -16,7 +16,27 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  # The header
+  features:
+    # Autohide the header
+    - header.autohide
 
+    # For navigation
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.instant
+    - navigation.tabs.sticky
+    - toc.integrate
+    - navigation.footer
+  # Extending the theme
+  custom_dir: overides
+
+  # Github Icon
+  icon:
+    repo:fontawesome/brands/git-alt
+
+repo_url: https://github.com/Treedy2020/TreeDyStack
+repo_name: Treedy2020/TreeDyStack
 
 plugins:
   - search
@@ -25,6 +45,7 @@ plugins:
   - glightbox
   # Social Cards Part
   - social
+  - tags
 
 nav:
   - Home: 'index.md'
@@ -87,3 +108,13 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+# Extra Part
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon 
+      link: https://fosstodon.org/@squidfunk
+      name: TreeDy2020
+  generator: true
+# Copy Right
+copyright: Copyright &copy; 2020-2025 TreeDy Donate
