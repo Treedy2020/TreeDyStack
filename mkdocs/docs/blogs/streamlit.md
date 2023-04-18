@@ -1,14 +1,7 @@
 ---
 title: Streamlit：用Python写一个简易、美观的App并免费部署！
+picture_path: https://github.com/Treedy2020/TreeDyStack/raw/master/mkdocs/docs/blogs/streamlit/
 ---
-{% set pic_path = https://github.com/Treedy2020/TreeDyStack/tree/master/mkdocs/docs/blogs/streamlit/}
-
-This is the picture path : {{pic_path}}
-
-And this is the picture:
-
-![Ventura]({{pic_path}}/venrura.png)
-
 # Streamlit  
 以Python为基础开发语言的开发者，特别是算法工程师们的一个痛点是**开发内容的美观呈现**。我在写一个程序时想完成的不仅是程序的核心逻辑，理想中的状态是，我能通过Python简单的几行代码，就将自己的程序写成一个可交互的美观的App或者网页。:smile:[Streamlit](https://streamlit.io/ 点击进入Streamlit官网)让你可以不用写HTML，CSS，JS，就能轻松实现这个目标，它基于Github的项目仓库进行版本管理，并且可以**免费的进行App部署**。
 除此以外，它有诸多优点：
