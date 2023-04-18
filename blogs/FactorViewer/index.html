@@ -5,28 +5,28 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="assets/images/favicon.png" rel="icon"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>TreeDy Stack</title>
-<link href="assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>基于streamlit的工厂设备监管系统 - TreeDy Stack</title>
+<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
-<meta content="Home" property="og:title"/>
+<meta content="基于streamlit的工厂设备监管系统 - TreeDy Stack" property="og:title"/>
 <meta content="None" property="og:description"/>
-<meta content="./assets/images/social/index.png" property="og:image"/>
+<meta content="./assets/images/social/blogs/FactorViewer.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="None" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Home" name="twitter:title"/>
+<meta content="基于streamlit的工厂设备监管系统 - TreeDy Stack" name="twitter:title"/>
 <meta content="None" name="twitter:description"/>
-<meta content="./assets/images/social/index.png" name="twitter:image"/>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="./assets/images/social/blogs/FactorViewer.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -37,7 +37,7 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -60,7 +60,7 @@ Hope is a good thing, maybe the best of things.
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="TreeDy Stack" class="md-header__button md-logo" data-md-component="logo" href="." title="TreeDy Stack">
+<a aria-label="TreeDy Stack" class="md-header__button md-logo" data-md-component="logo" href="../.." title="TreeDy Stack">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -76,7 +76,7 @@ Hope is a good thing, maybe the best of things.
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Home
+              基于streamlit的工厂设备监管系统
             
           </span>
 </div>
@@ -138,12 +138,12 @@ Hope is a good thing, maybe the best of things.
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href=".">
+<a class="md-tabs__link" href="../..">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="blogs/streamlit/">
+<a class="md-tabs__link md-tabs__link--active" href="../streamlit/">
         Blogs
       </a>
 </li>
@@ -159,7 +159,7 @@ Hope is a good thing, maybe the best of things.
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="TreeDy Stack" class="md-nav__button md-logo" data-md-component="logo" href="." title="TreeDy Stack">
+<a aria-label="TreeDy Stack" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="TreeDy Stack">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     TreeDy Stack
@@ -175,14 +175,13 @@ Hope is a good thing, maybe the best of things.
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href=".">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2">
           Blogs
           <span class="md-nav__icon md-icon"></span>
@@ -194,14 +193,47 @@ Hope is a good thing, maybe the best of things.
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="blogs/streamlit/">
+<a class="md-nav__link" href="../streamlit/">
         Streamlit：用Python写一个简易、美观的App并免费部署！
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="blogs/FactorViewer/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          基于streamlit的工厂设备监管系统
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         基于streamlit的工厂设备监管系统
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    基础图纸
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    基础类
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    系统框架
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -213,34 +245,129 @@ Hope is a good thing, maybe the best of things.
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/Treedy2020/TreeDyStack/edit/master/docs/index.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/Treedy2020/TreeDyStack/edit/master/docs/blogs/FactorViewer.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="_1">介绍</h1>
-<p>这是TreeDy基于mkdocs制作的一个静态网站，用于做技术栈的记录和分享。TreeDy本人喜欢自然语言处理技术，是一个初学者，这里记录了他在学习一些有趣的技术的过程，希望有一天能够帮助到一些人。</p>
-<h1 id="_2">联系方式</h1>
+<h1>基于streamlit的工厂设备监管系统</h1>
+<h2 id="_1">基础图纸</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://github.com/Treedy2020/TreeDyStack/raw/master/mkdocs/docs/blogs/FactorViewer//base.png"><img alt="草稿" src="https://github.com/Treedy2020/TreeDyStack/raw/master/mkdocs/docs/blogs/FactorViewer//base.png"/></a></p>
+<h2 id="_2">概念</h2>
+<blockquote>
+<p>上位机（Host Computer, Master or Supervisor）是一个通常用于监控和控制生产线、工厂设备或工业自动化系统的计算机。上位机与下位机（被控制设备，如生产线上的设备、机器人等）相互配合，通过通信协议（如Modbus、CAN、以太网等）进行数据交换和指令传输。</p>
+</blockquote>
+<p>上位机的主要职责包括：</p>
+<ol>
+<li>监控和控制：上位机可以实时监控下位机的状态和数据，并对其发送控制命令，如启动、停止、调整参数等。</li>
+<li>数据采集与处理：上位机可以收集下位机的数据，如传感器读数、设备状态等，并对这些数据进行处理、分析和存储。</li>
+<li>故障诊断与报警：上位机可以对下位机发出的故障或异常信号进行诊断，并采取相应措施，如发出报警、停止设备等。</li>
+<li>人机界面（HMI）：上位机通常提供一种人机界面，以便操作员和管理员监控系统状态、控制设备、查看数据报表等。</li>
+<li>通信：上位机负责与下位机以及其他相关系统（如数据库、ERP系统等）之间的通信，确保数据的准确传输和系统之间的协同工作。</li>
+</ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>电子邮件：2032974@tongji.edu.cn
-上海市同济大学嘉定校区</p>
+<p>上位机可以是一台工业计算机、PC、服务器甚至嵌入式设备，具体取决于所需的功能和性能。上位机软件可以使用各种编程语言（如C/C++、Python、Java等）和开发工具（如LabVIEW、WinCC、Ignition等）进行开发。</p>
 </div>
+<h2 id="_3">基础类</h2>
+<pre class="mermaid"><code>classDiagram
+    class 工厂设备监管系统{
+        - 工厂名称
+        - 位置
+        - 生产线（多条）
+    }
+
+    class 生产线{
+        - 生产线编号
+        - 产品类型
+        - 设备列表
+        - 传感器列表
+        + 数据采集方法()
+        +   数据处理、存储、分析方法()
+        + 报警方法()
+    }
+
+    class 设备{
+        - 名称
+        - 类型
+        - 状态
+        - 操作
+        - 所在产线位置
+    }
+
+    class 传感器{
+        - 类型（温度传感器、压力传感器等）
+        - 状态
+        - 读数
+        - 所在产线位置
+    }
+
+
+        工厂设备监管系统--|&gt; 生产线: 包含
+        生产线 --|&gt; 传感器: 包含
+        生产线 --|&gt; 设备: 包含
+
+        class User{
+        - 姓名
+            - 职位
+            - 权限
+    }
+
+    class 日志{
+        - 日志类型
+        - 日志时间
+        - 操作人员
+        + 记录系统操作和事件()
+        + 日志处理方法()
+    }
+
+    class 通讯{
+        - 系统通信
+        + 连接数据库方法()
+        + 断开连接方法()
+        + 发送数据方法()
+        + 接收数据方法()
+    }</code></pre>
+<h2 id="_4">系统框架</h2>
+<pre class="mermaid"><code>C4Context
+
+Container_Boundary(enterprise, "工厂设备监管系统") {
+    Person(users, "操作员\管理者", "生产线上的操作者")
+    SystemDb(db, "数据库", "存储设备数据, 传感器数据, 操作日志, 指令集合并记录系统事件日志")
+    SystemDb(instructions, "指令集合", "不同类型的设备指令集合以及系统指令集合")
+
+    Container_Boundary(line1, "生产线 1", "生产线 1") {
+        Container(sensors1, "传感器列表1")
+        Container(equipments1, "设备列表1")
+    }
+    Container_Boundary(line2, "生产线 2") {
+        Container(sensors2, "传感器列表2")
+        Container(equipments2, "设备列表2")
+    }
+    Container_Boundary(line3, "生产线 3") {
+        Container(sensors3, "传感器列表3")
+        Container(equipments3, "设备列表3")
+    }
+    Container_Boundary(line4, "生产线 k") {
+        Container(added, "...") 
+    }
+}
+</code></pre>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Next: Streamlit：用Python写一个简易、美观的App并免费部署！" class="md-footer__link md-footer__link--next" href="blogs/streamlit/" rel="next">
+<a aria-label="Previous: Streamlit：用Python写一个简易、美观的App并免费部署！" class="md-footer__link md-footer__link--prev" href="../streamlit/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
-                Next
+                Previous
               </span>
               Streamlit：用Python写一个简易、美观的App并免费部署！
             </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
@@ -269,7 +396,7 @@ Hope is a good thing, maybe the best of things.
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.tabs", "navigation.tracking", "navigation.instant", "navigation.tabs.sticky", "toc.integrate", "navigation.footer"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tabs", "navigation.tracking", "navigation.instant", "navigation.tabs.sticky", "toc.integrate", "navigation.footer"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
