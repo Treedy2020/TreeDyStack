@@ -1,20 +1,18 @@
 ---
 title: 两个分类任务快速入门PaddlePaddle
 ---
-最近百度文心一言的表现被许多网友嘲笑，但上个月入门PaddlePaddle以来，我对百度是由黑转粉。Paddle作为比PyTorch更早开源的深度学习框架，很多国内的同学对它的映像并不深或者并不好。或许是出于希望对开源框架推广的原因，百度的AI Studio目前只需要完成这篇文章中的两个分类任务其中之一：    
-- 新浪新闻标题分类  
-- 猫十二分类  
+最近百度的LLM文心一言的表现被许多网友嘲笑，但上个月入门PaddlePaddle以来，我对百度是由黑转粉。Paddle作为比PyTorch更早开源的深度学习框架，很多国内的同学对它的映像并不深或者并不好。出于希望对开源框架推广的原因，百度的AI Studio目前只需要完成这篇文章中的两个分类任务其中之一(注册[AI Studio](https://aistudio.baidu.com/aistudio/)并在[AI学习地图](https://aistudio.baidu.com/aistudio/learnmap?_origin=newbie)界面选择二者之一即可开启任务)：   
 
+- [新浪新闻文本标题分类](https://aistudio.baidu.com/aistudio/competition/detail/10/0/introduction)  
+- [猫十二分类体验赛](https://aistudio.baidu.com/aistudio/competition/detail/136/0/introduction)
 
 即可以获得100小时的32G V100 的GPU使用时长，同时每周还有4小时的4块V100（128G）显存的使用时长，每天登录运行即送12小时的V100（16G）的使用时长。百度并不是从今年开始这样干，而是从很久以前就开始这样送了，AI Studio和目前许多致力于把显卡的租用价格炒高的云计算平台不同，这个平台甚至**不能充钱**。Paddle时常被诟病非常的像Torch，一部分API的使用是十分像的，其实我觉得对于广大缺算力的硕士和本科生这甚至是福音，因为原则上你可以用Paddle提供的算力和数据集资源熟悉Numpy，Pandas这些深度学习算法工程师必备的Python库，也可以通过熟悉Paddle来熟悉Torch，AI Studio可以为资金并不富裕的同学提供宝贵的算力，特别是在LLM逐渐占据我们的视野的今天，有一个国产的框架可以无偿为你提供128G的显存，无论是对做分布式模型的训练的学习，还是玩更大的模型这都是很诱人的。相较之百度网盘这种不充钱就强制限制网速的产品，简直不像是同一家公司。
 
 ## 任务背景介绍
-新浪新闻标题分类和猫十二分类是NLP和CV的典型分类任务，非常适合作为新手和PaddlePaddle框架的入门项目。前者的目的是为一个中文的新闻标题在政治、教育、财经...等14个类别上进行分类，而猫十二分类项目则希望为一张图片中的猫打上它的具体所属小类的标签。在这篇文章中，我们将统一采用对预训练模型在分类任务上进行微调的方式为这两个任务提供Baseline。
+新浪新闻标题分类和猫十二分类是NLP和CV的典型分类任务，非常适合作为新手和PaddlePaddle框架的入门项目。前者的目的是为一个中文的新闻标题在政治、教育、财经...等14个类别上进行分类，而猫十二分类项目则希望为一张图片中的猫打上它的具体所属小类的标签。在这篇文章中，我们将统一采用对预训练模型在分类任务上进行微调的方式为这两个任务提供Baseline，具体的赛事和数据描述见：  
+- [新浪新闻文本标题分类](https://aistudio.baidu.com/aistudio/competition/detail/10/0/introduction)  
+- [猫十二分类体验赛](https://aistudio.baidu.com/aistudio/competition/detail/136/0/introduction)
 
-## 文件树
-=== "新浪新闻标题分类"
-
-=== "猫十二分类"
 ## 导入库并预定义一些常数
 首先导入一些需要的包
 === "新浪新闻标题分类"
@@ -450,6 +448,25 @@ title: 两个分类任务快速入门PaddlePaddle
     ```
 
 ## 最终结果
-在赛事处提交最终的保存的result.txt和result.csv即可，由于这个Demo中的例子都采用了相对比较小的模型，可以把batch_size设置的很大，训练也很快。你也可以通过更换更大的预训练模型来达到更好的效果，对于新浪新闻标题分类而言，只需要更换MODEL_NAME即可，对于猫十二分类，则可以在`paddle.vision.models`的官方API中寻找想要尝试的其他模型。
+在对应的赛事提交入口提交最终的保存的result.txt和result.csv即可，由于这个Demo中的例子都采用了相对比较小的模型，可以把batch_size设置的很大，训练也很快，可以得到相对不错的Base Line，本人使用`ernie-3.0-base-zh`和`resnet_50`在对应的任务下得到的分数分别是88.2分（2020年3月排行榜42位）和92.5分（2023年5月排行榜135位）。
+
+你也可以简单的通过更换更大的预训练模型来达到更好的效果，对于新浪新闻标题分类而言，只需要更换前述代码中的MODEL_NAME即可，Paddlenlp提供了[预训练模型库和模型适合的任务索引](https://paddlenlp.readthedocs.io/zh/latest/model_zoo/index.html)，只要找到适用于Sequence Classification均可使用。对于猫十二分类，则可以在`paddle.vision.models`的[官方API](https://www.paddlepaddle.org.cn/documentation/docs/zh/api/paddle/vision/Overview_cn.html)中寻找想要尝试的其他模型。
+
+本方法的缺陷是：
+
+- 参数的设置大多是随意的，有很大的调参空间；
+
+- 数据的预处理步骤较为简单。对于新浪新闻标题项目，数据的量是足够多的，但样本可能存在小幅度的不平衡；对于猫十二分类项目，数据的量并不大，可以考虑进行一定的数据增强对原数据进一步的利用；
+
+- 模型的训练并不快。由于训练时采用了单精度的动转静模型训练方式，训练的速度比动态图更快，但推荐采用官方的API教程[自动混合精度训练（AMP)](https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/performance_improving/amp_cn.html)修改少量代码转为fp16训练，推理和训练的速度都会快很多。
+
+## 参考资料
+1. [个人新浪新闻标题分类项目主页](https://aistudio.baidu.com/aistudio/projectdetail/6021258)
+2. [个人猫十二分类项目主页](https://aistudio.baidu.com/aistudio/projectdetail/6086926)
+3. [个人新浪新闻标题Github主页](https://github.com/Treedy2020/NewsTitles)
+1. [新浪新闻标题分类优秀参考项目](https://aistudio.baidu.com/aistudio/projectdetail/3502908)
+4. [猫十二官方优秀Baseline项目1](https://aistudio.baidu.com/aistudio/projectdetail/3461935?channelType=0&channel=0)
+5. [猫十二官方优秀Baseline项目2](https://aistudio.baidu.com/aistudio/projectdetail/3906013)
+
 
 
