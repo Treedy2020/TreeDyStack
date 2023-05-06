@@ -52,7 +52,8 @@ nav:
   - Blogs: 
     - './blogs/streamlit.md'
     - './blogs/FactorViewer.md'
-
+    - './blogs/DistributedTraining.md'
+    - './blogs/PaddlePaddle.md'
 markdown_extensions:
 
   # Annotations Part
